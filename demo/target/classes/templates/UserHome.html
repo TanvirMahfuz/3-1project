@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<script>
+    function clicked(){
+        window.location.href="http://localhost:8080/PreHome"
+    }
+    function viewUserProfile(){
+        window.location.href="http://localhost:8080/ViewUserProfile"
+    }
+    function seeLawyers(){
+        window.location.href="http://localhost:8080/seeLawyerList"
+    }
+</script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+View Profile <button type= "submit" name="numbers" onclick="viewUserProfile()">profile </button><br>
+ <button type= "submit" name="numbers" onclick="clicked()">Log out </button><br><br>
+See Lawyers <button type= "submit" name="numbers" onclick="seeLawyers()"> LawyerList </button><br>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lawyer List</title>
+</head>
+<body>
+<h1>Lawyers List</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Extra Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <form th:each="lawyer : ${database.lawyerList}" th:action="@{/processExtraAction}" method="post">
+        <input type="hidden" name="lawyer" th:value="${lawyer}" />
+        <!-- ... -->
+        <tr>
+            <td th:text="${lawyer.name}"></td>
+            <td>
+                <button type="submit">see Profile</button>
+            </td>
+        </tr>
+    </form>
+    </tbody>
+</table>
+</body>
+</html>
